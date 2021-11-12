@@ -28,7 +28,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][img/home.png]]
+![home page](img/home.png)
 
 A simple Symfony4 project that gives users the possibility to creat a pdf CV / Resume by just filling a form.
 
@@ -74,9 +74,9 @@ _Below is an example of how you can download and set up the app._
    composer require symfony/web-server-bundle
    ```
 3.Install KnpSnappyBundle
-    ```sh
-    composer require knplabs/knp-snappy-bundle
-    ```
+   ```sh
+   composer require knplabs/knp-snappy-bundle
+   ```
     
 4.Run the project
    ```sh
@@ -90,7 +90,11 @@ _Below is an example of how you can download and set up the app._
 
 Simple to use web site, once you run the project you'll be directed to the home page in which you'll be able to choose the template you'd like to use.
 
-Then you'll have to fill the form with your details, once you click on `Submit` your download will start.
+Then you'll have to fill the form with your details.
+
+![CV form](img/fom.png)
+
+Once you click on `Submit` your download will start.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

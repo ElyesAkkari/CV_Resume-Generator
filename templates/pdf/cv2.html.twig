@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume/CV Design</title>
+
+    <script src="https://kit.fontawesome.com/b99e675b6e.js" ></script>
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    {#   <link rel="stylesheet" type="text/css" href="{{  asset('styles.css')}}">
+   #}
+</head>
+<body>
+
+<div class="resume">
+    <div class="resume_left">
+        <div class="resume_profile">
+           {#  <img src={{ pathToWeb~'/'~app.user.imageName }}alt="profile_pic">#}
+        </div>
+        <div class="resume_content">
+            <div class="resume_item resume_info">
+                <div class="title">
+                    <p class="bold">{{ name }}</p>
+                    <p class="regular">{{ poste }}</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="data">
+                            {{ home }}
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="fa fa-mobile"></i>
+                        </div>
+                        <div class="data">
+                            {{ tel }}
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="data">
+                            {{ mail }}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="resume_item resume_skills">
+                <div class="title">
+                    <p class="bold">skill's</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="skill_name">
+                            {{ s1 }}
+                        </div>
+                        <div class="skill_progress">
+                            <span style="width: {{ p1 }}%;"></span>
+                        </div>
+                        <div class="skill_per">{{ p1 }}%</div>
+                    </li>
+                    <li>
+                        <div class="skill_name">
+                            {{ s2 }}
+                        </div>
+                        <div class="skill_progress">
+                            <span style="width: {{ p2 }}%;"></span>
+                        </div>
+                        <div class="skill_per">{{ p2 }}%</div>
+                    </li>
+                    <li>
+                        <div class="skill_name">
+                            {{ s3 }}
+                        </div>
+                        <div class="skill_progress">
+                            <span style="width: {{ p3 }}%;"></span>
+                        </div>
+                        <div class="skill_per">{{ p3 }}%</div>
+                    </li>
+                    <li>
+                        <div class="skill_name">
+                            {{ s4 }}
+                        </div>
+                        <div class="skill_progress">
+                            <span style="width: {{ p4 }}%;"></span>
+                        </div>
+                        <div class="skill_per">{{ p4 }}%</div>
+                    </li>
+                    <li>
+                        <div class="skill_name">
+                            {{ s5 }}
+                        </div>
+                        <div class="skill_progress">
+                            <span style="width: {{ p5 }}%;"></span>
+                        </div>
+                        <div class="skill_per">{{ p5 }}%</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="resume_item resume_social">
+                <div class="title">
+                    <p class="bold">Social</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="icon">
+                            <i class="fa fa-facebook-square"></i>
+                        </div>
+                        <div class="data">
+                            <p class="semi-bold">Facebook</p>
+                            <p>{{fb}}</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="fa fa-github"></i>
+                        </div>
+                        <div class="data">
+                            <p class="semi-bold">Github</p>
+                            <p>{{gh}}</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="fa fa-linkedin"></i>
+                        </div>
+                        <div class="data">
+                            <p class="semi-bold">Linkedin</p>
+                            <p>{{linkedin}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+ <div class="resume_right">
+        <div class="resume_item resume_about">
+            <div class="title">
+                <p class="bold">Profile</p>
+            </div>
+            <p>{{ profil }}</p>
+        </div>
+        <div class="resume_item resume_work">
+            <div class="title">
+                <p class="bold">Experience</p>
+            </div>
+            <ul>
+                <li>
+                    <div class="date">{{ dd1 }} - {{ df1 }}</div>
+                    <div class="info">
+                        <p class="semi-bold">{{ soc1 }}</p>
+                        <p>{{ exp1 }}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="date">{{ dd2 }} - {{ df2 }}</div>
+                    <div class="info">
+                        <p class="semi-bold">{{ soc2 }}</p>
+                        <p>{{exp2}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="resume_item resume_education">
+            <div class="title">
+                <p class="bold">Education</p>
+            </div>
+            <ul>
+                <li>
+                    <div class="date">{{ d1 }} - {{ f1 }}</div>
+                    <div class="info">
+                        <p class="semi-bold">{{ ed1 }}</p>
+                        <p><i class="fa fa-graduation-cap"></i> {{ cert1 }}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="date">{{ d2 }} - {{ f2 }}</div>
+                    <div class="info">
+                        <p class="semi-bold">{{ ed2 }}</p>
+                        <p><i class="fa fa-graduation-cap"></i> {{cert2}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+</body>
+</html>

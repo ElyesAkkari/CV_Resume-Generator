@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <style>
+        .cv{
+            margin-left: 25%;
+        }
+        .card{
+            margin : 2px 6px 2px 6px;
+        }
+        .cust-heading{
+            padding-top: 80px;
+        }
+        .card-img-top {
+            width: 318px;
+            height: 460px;
+        }
+        .card-body{
+            border-top: 1px solid #0275d8;
+            border-radius: 0;
+            color: #0275d8;
+            text-align: center;
+        }
+    </style>
+<div class="cust-heading">
+    <div class="cv">
+        <div class="row">
+<div class="card border-primary" id="card" style="width: 20rem;">
+   <a href="cvmaker1">
+   <img class="card-img-top" src="cv1.png" alt="Card image cap">
+   <div class="card-body">
+        <p class="card-text">CV basic</p>
+    </div></a>
+</div>
+
+<div class="card border-primary" id="card" style="width: 20rem;">
+    <a href="cvmaker2">
+    <img class="card-img-top" src="cv2.png" alt="Card image cap">
+    <div class="card-body">
+        <p class="card-text">CV 2</p>
+    </div>
+    </a>
+</div>
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

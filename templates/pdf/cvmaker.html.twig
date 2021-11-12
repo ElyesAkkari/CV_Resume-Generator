@@ -1,0 +1,108 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+
+<div class="resume">
+    <h4>Créer un CV Basic</h4>
+    <form method="post" action="{{ path('pdf1') }}">
+    <div class="form-row">
+        <div class="form-group">
+        <label for="avatar">Ajouter Image :</label>
+        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+        </div>
+    </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Nom et Prenom :</label>
+                <input type="text" class="form-control" id="name" name="name"  readonly>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="mail">Email :</label>
+                <input type="text" class="form-control" id="mail" name="mail"  readonly>
+            </div>
+        </div>
+    <div class="form-group">
+        <label for="poste">Poste :</label>
+        <input type="text" class="form-control" id="poste" name="poste" placeholder="ex: WEB DESIGNER" required>
+    </div>
+    <div class="form-group">
+        <label for="poste">Adresse Locale: :</label>
+        <input type="text" class="form-control" id="home" name="home" placeholder="XX rue A, Tunis, Tunisie" required>
+    </div>
+    <div class="form-group">
+        <label for="tel">Numero du téléphone :</label>
+        <input type="text" class="form-control" id="tel" name="tel" placeholder="+21612345678" required>
+    </div>
+    <div class="form-group">
+        <label for="profile">Profile :</label>
+        <textarea class="form-control" id="profil" name="profil" placeholder="Short description about yourself" rows="3"></textarea>
+    </div>
+    <label for="poste">Skills :</label>
+    <div class="form-row">
+        {% for i in 1..5 %}
+            <div class="form-group col-sm-2">
+                    <input type="text" class="form-control" id="s{{ i }}" name="s{{ i }}" placeholder="Skill {{ i }}">
+                <label>pourcentage skill {{ i }}</label>
+                     <input class="form-control" name="p{{ i }}" id="p{{ i }}" type="number" min="10" max="100" step="10" value="50" />
+            </div>
+        {% endfor%}
+    </div>
+    <label>Experience :</label>
+
+    <div class="form-group">
+        {% for p in 1..2 %}
+            <div class="form-group">
+                <input type="text" class="form-control" id="soc{{ p }}" name="soc{{ p }}" placeholder="Société{{ p }}" required>
+                <textarea class="form-control" id="exp{{ p }}" name="exp{{ p }}" placeholder="Short description of the Experience {{ p }}" rows="2"></textarea>
+
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Année du début experience {{ p }}</label>
+                        <input class="form-control" name="dd{{ p }}" id="dd{{ p }}" type="number" min="1900" max="2099" step="1" value="2021" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Année du fin experience {{ p }}</label>
+                        <input class="form-control" name="df{{ p }}" id="df{{ p }}" type="number" min="1900" max="2099" step="1" value="2021" />
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <label >Education :</label>
+    {% for i in 1..2 %}
+        <div class="form-group">
+            <input type="text" class="form-control" id="ed{{ i }}" name="ed{{ i }}" placeholder="ex: Univesity" required>
+            <input type="text" class="form-control" id="cert{{ i }}" name="cert{{ i }}" placeholder="Certeficat: ex : licence en Informatiques" required>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Année du début {{ i }}</label>
+                <input class="form-control" name="d{{ i }}" id="d{{ i }}" type="number" min="1900" max="2099" step="1" value="2021" />
+            </div>
+            <div class="form-group col-md-6">
+                <label>Année du fin {{ i }}</label>
+                <input class="form-control" name="f{{ i }}" id="f{{ i }}" type="number" min="1900" max="2099" step="1" value="2021" />
+            </div>
+        </div>
+    {% endfor %}
+    <label >Reseaux Sociaux :</label>
+    <div class="form-group">
+        <label for="fb"><i class="fa fa-facebook-square"></i> Facebook :</label>
+        <input type="text" class="form-control" id="fb" name="fb" placeholder="nom@facebook" required>
+    </div>
+    <div class="form-group">
+        <label for="poste"><i class="fa fa-linkedin-square"></i> LinkedIn :</label>
+        <input type="text" class="form-control" id="linkedin" name="linkedin" placeholder="linkedin" required>
+    </div>
+    <div class="form-group">
+        <label for="poste"><i class="fa fa-github-square"></i>  Github :</label>
+        <input type="text" class="form-control" id="github" name="github" placeholder="github" required>
+    </div>
+        <div class="form-group" align="center">
+            <input type="submit" value="Submit" id="myButton" class="btn btn-outline-primary">
+            <input type="reset" value="Cancel" class="btn btn-outline-danger">
+        </div>
+    </form>
+</div>
+{% endblock %}

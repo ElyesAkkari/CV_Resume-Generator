@@ -1,5 +1,7 @@
 <div id="top"></div>
+
 # Symfony 4 : Cv/Resume Generator
+
  <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -25,6 +27,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+
+[![Product Name Screen Shot][img/home.png]]
 
 A simple Symfony4 project that gives users the possibility to creat a pdf CV / Resume by just filling a form.
 

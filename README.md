@@ -30,7 +30,7 @@
 
 ![home page](img/home.png)
 
-A simple Symfony4 project that gives users the possibility to creat a pdf CV / Resume by just filling a form.
+A simple Symfony4 project that gives users the possibility to create a pdf CV / Resume by just filling a form.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
